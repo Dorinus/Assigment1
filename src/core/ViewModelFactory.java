@@ -8,7 +8,7 @@ public class ViewModelFactory
 
   private ModelFactory mf;
   private ThermometerViewModel thermometerViewModel;
-  private Radiator radiator
+  private Radiator radiator;
 
   public ViewModelFactory(ModelFactory mf)
   {

@@ -5,7 +5,6 @@ import javafx.beans.property.StringProperty;
 import model.Radiator.Radiator;
 import model.Thermometer.ExternalThermometer;
 import model.Thermometer.ExternalThermometerModel;
-import model.Thermometer.PropretyChangeThermometer;
 import model.Thermometer.Thermometer;
 
 import java.beans.PropertyChangeEvent;
@@ -17,14 +16,14 @@ public class ThermometerViewModel
   private Thermometer thermometer, thermometer1;
   private StringProperty outsideTempLabel, sevenMetersTemp, oneMeterTemp, powerLabel;
 
-  public ThermometerViewModel(PropretyChangeThermometer subject)
+  public ThermometerViewModel(ExternalThermometer subject)
   {
     subject = new ExternalThermometerModel();
     Thread externarTherm = new Thread((Runnable) subject);
     externarTherm.start();   //??
 
     // proprety change thermometer
-    subject.addListener(this::outsideTemp);
+  //  subject.addListener(this::outsideTemp);
 
     outsideTempLabel = new SimpleStringProperty();
 
